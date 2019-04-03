@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://webservices.trwaftermarket.com/eos/v1/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="https://webservices.trwaftermarket.com/eos/v1/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://webservices.trwaftermarket.com/eos/v1/">
+      <s:element name="getShippingAddresses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:ShipToRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ShipToRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ExtensionDataObject" />
+      <s:element name="getShippingAddressesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getShippingAddressesResult" type="tns:ShipToResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ShipToResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseEmpty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToAddresses" type="tns:ArrayOfShipToAddress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfShipToAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ShipToAddress" nillable="true" type="tns:ShipToAddress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ShipToAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getStockAvailability">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:StockAvailabilityRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockAvailabilityRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parts" type="tns:ArrayOfStockEnquiry" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStockEnquiry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockEnquiry" nillable="true" type="tns:StockEnquiry" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StockEnquiry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getStockAvailabilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStockAvailabilityResult" type="tns:StockAvailabilityResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockAvailabilityResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseEmpty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockAvailability" type="tns:ArrayOfStockAvailability" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStockAvailability">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockAvailability" nillable="true" type="tns:StockAvailability" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StockAvailability">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnteredPartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuppliedPartNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnteredQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuppliedQuantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailabilityStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailabilityStatusImage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailStatus" type="tns:ArrayOfStatusCode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStatusCode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StatusCode" nillable="true" type="tns:StatusCode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatusCode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getStockPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:StockPriceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockPriceRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parts" type="tns:ArrayOfStockEnquiry" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getStockPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStockPriceResult" type="tns:StockPriceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockPriceResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseEmpty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockPrice" type="tns:ArrayOfStockPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStockPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockPrice" nillable="true" type="tns:StockPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StockPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnteredPartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuppliedPartNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EnteredQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuppliedQuantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Surcharge" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreightCharge" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="HandlingCharge" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitPrice" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailStatus" type="tns:ArrayOfStatusCode" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getTransportMethods">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:TransportMethodRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransportMethodRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getTransportMethodsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTransportMethodsResult" type="tns:TransportMethodResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransportMethodResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseEmpty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportMethods" type="tns:ArrayOfTransportMethod" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTransportMethod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TransportMethod" nillable="true" type="tns:TransportMethod" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TransportMethod">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportMethodCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportMethodDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="placeOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:OrderRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderLines" type="tns:ArrayOfOrderData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderData" nillable="true" type="tns:OrderData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="PartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="placeOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="placeOrdersResult" type="tns:OrderResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="OrderResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseEmpty" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAccount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderTypeCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerReference" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalOrderValue" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderLines" type="tns:ArrayOfOrderLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOrderLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OrderLine" nillable="true" type="tns:OrderLine" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OrderLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ExtensionData" type="tns:ExtensionDataObject" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderLineNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderLineSplitNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderLineStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderedPartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuppliedPartNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderedQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuppliedQuantity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreightCharge" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="HandlingCharge" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Surcharge" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitPrice" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DetailStatus" type="tns:ArrayOfStatusCode" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getShippingAddressesSoapIn">
+    <wsdl:part name="parameters" element="tns:getShippingAddresses" />
+  </wsdl:message>
+  <wsdl:message name="getShippingAddressesSoapOut">
+    <wsdl:part name="parameters" element="tns:getShippingAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStockAvailabilitySoapIn">
+    <wsdl:part name="parameters" element="tns:getStockAvailability" />
+  </wsdl:message>
+  <wsdl:message name="getStockAvailabilitySoapOut">
+    <wsdl:part name="parameters" element="tns:getStockAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStockPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:getStockPrice" />
+  </wsdl:message>
+  <wsdl:message name="getStockPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:getStockPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTransportMethodsSoapIn">
+    <wsdl:part name="parameters" element="tns:getTransportMethods" />
+  </wsdl:message>
+  <wsdl:message name="getTransportMethodsSoapOut">
+    <wsdl:part name="parameters" element="tns:getTransportMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="placeOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:placeOrders" />
+  </wsdl:message>
+  <wsdl:message name="placeOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:placeOrdersResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DistributorWebServiceSoap">
+    <wsdl:operation name="getShippingAddresses">
+      <wsdl:input message="tns:getShippingAddressesSoapIn" />
+      <wsdl:output message="tns:getShippingAddressesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStockAvailability">
+      <wsdl:input message="tns:getStockAvailabilitySoapIn" />
+      <wsdl:output message="tns:getStockAvailabilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStockPrice">
+      <wsdl:input message="tns:getStockPriceSoapIn" />
+      <wsdl:output message="tns:getStockPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTransportMethods">
+      <wsdl:input message="tns:getTransportMethodsSoapIn" />
+      <wsdl:output message="tns:getTransportMethodsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="placeOrders">
+      <wsdl:input message="tns:placeOrdersSoapIn" />
+      <wsdl:output message="tns:placeOrdersSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DistributorWebServiceSoap" type="tns:DistributorWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getShippingAddresses">
+      <soap:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getShippingAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockAvailability">
+      <soap:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getStockAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockPrice">
+      <soap:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getStockPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransportMethods">
+      <soap:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getTransportMethods" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="placeOrders">
+      <soap:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/placeOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DistributorWebServiceSoap12" type="tns:DistributorWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getShippingAddresses">
+      <soap12:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getShippingAddresses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockAvailability">
+      <soap12:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getStockAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStockPrice">
+      <soap12:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getStockPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransportMethods">
+      <soap12:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/getTransportMethods" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="placeOrders">
+      <soap12:operation soapAction="https://webservices.trwaftermarket.com/eos/v1/placeOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DistributorWebService">
+    <wsdl:port name="DistributorWebServiceSoap" binding="tns:DistributorWebServiceSoap">
+      <soap:address location="http://webservices.trwaftermarket.com/eos/v1/DistributorWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DistributorWebServiceSoap12" binding="tns:DistributorWebServiceSoap12">
+      <soap12:address location="http://webservices.trwaftermarket.com/eos/v1/DistributorWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

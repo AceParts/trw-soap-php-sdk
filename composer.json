@@ -1,0 +1,15 @@
+{
+    "name": "aceparts/trw-soap-client",
+    "description": "Package generated from https://webservices.trwaftermarket.com/eos/v1/DistributorWebService.asmx?wsdl using wsdltophp/packagegenerator",
+    "require": {
+        "php": ">=5.3.3",
+        "ext-soap": "*",
+        "ext-mbstring": "*",
+        "wsdltophp/packagebase": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "./src/"
+        }
+    }
+}
