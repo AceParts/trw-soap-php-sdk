@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class PlaceOrdersResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\OrderResponse
+     * @var \AceParts\Trw\StructType\OrderResponse
      */
     public $placeOrdersResult;
     /**
      * Constructor method for placeOrdersResponse
      * @uses PlaceOrdersResponse::setPlaceOrdersResult()
-     * @param \StructType\OrderResponse $placeOrdersResult
+     * @param \AceParts\Trw\StructType\OrderResponse $placeOrdersResult
      */
-    public function __construct(\StructType\OrderResponse $placeOrdersResult = null)
+    public function __construct(\AceParts\Trw\StructType\OrderResponse $placeOrdersResult = null)
     {
         $this
             ->setPlaceOrdersResult($placeOrdersResult);
     }
     /**
      * Get placeOrdersResult value
-     * @return \StructType\OrderResponse|null
+     * @return \AceParts\Trw\StructType\OrderResponse|null
      */
     public function getPlaceOrdersResult()
     {
@@ -38,10 +38,10 @@ class PlaceOrdersResponse extends AbstractStructBase
     }
     /**
      * Set placeOrdersResult value
-     * @param \StructType\OrderResponse $placeOrdersResult
-     * @return \StructType\PlaceOrdersResponse
+     * @param \AceParts\Trw\StructType\OrderResponse $placeOrdersResult
+     * @return \AceParts\Trw\StructType\PlaceOrdersResponse
      */
-    public function setPlaceOrdersResult(\StructType\OrderResponse $placeOrdersResult = null)
+    public function setPlaceOrdersResult(\AceParts\Trw\StructType\OrderResponse $placeOrdersResult = null)
     {
         $this->placeOrdersResult = $placeOrdersResult;
         return $this;
@@ -52,7 +52,7 @@ class PlaceOrdersResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\PlaceOrdersResponse
+     * @return \AceParts\Trw\StructType\PlaceOrdersResponse
      */
     public static function __set_state(array $array)
     {

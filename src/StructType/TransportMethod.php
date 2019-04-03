@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class TransportMethod extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -67,13 +67,13 @@ class TransportMethod extends AbstractStructBase
      * @uses TransportMethod::setTransportMethodCode()
      * @uses TransportMethod::setTransportMethodDescription()
      * @param int $lineNumber
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $shipToCode
      * @param string $orderTypeCode
      * @param string $transportMethodCode
      * @param string $transportMethodDescription
      */
-    public function __construct($lineNumber = null, \StructType\ExtensionDataObject $extensionData = null, $shipToCode = null, $orderTypeCode = null, $transportMethodCode = null, $transportMethodDescription = null)
+    public function __construct($lineNumber = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $shipToCode = null, $orderTypeCode = null, $transportMethodCode = null, $transportMethodDescription = null)
     {
         $this
             ->setLineNumber($lineNumber)
@@ -94,7 +94,7 @@ class TransportMethod extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \StructType\TransportMethod
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -107,7 +107,7 @@ class TransportMethod extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -115,10 +115,10 @@ class TransportMethod extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\TransportMethod
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -134,7 +134,7 @@ class TransportMethod extends AbstractStructBase
     /**
      * Set ShipToCode value
      * @param string $shipToCode
-     * @return \StructType\TransportMethod
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
     public function setShipToCode($shipToCode = null)
     {
@@ -156,7 +156,7 @@ class TransportMethod extends AbstractStructBase
     /**
      * Set OrderTypeCode value
      * @param string $orderTypeCode
-     * @return \StructType\TransportMethod
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
     public function setOrderTypeCode($orderTypeCode = null)
     {
@@ -178,7 +178,7 @@ class TransportMethod extends AbstractStructBase
     /**
      * Set TransportMethodCode value
      * @param string $transportMethodCode
-     * @return \StructType\TransportMethod
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
     public function setTransportMethodCode($transportMethodCode = null)
     {
@@ -200,7 +200,7 @@ class TransportMethod extends AbstractStructBase
     /**
      * Set TransportMethodDescription value
      * @param string $transportMethodDescription
-     * @return \StructType\TransportMethod
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
     public function setTransportMethodDescription($transportMethodDescription = null)
     {
@@ -217,7 +217,7 @@ class TransportMethod extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\TransportMethod
+     * @return \AceParts\Trw\StructType\TransportMethod
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayType;
+namespace AceParts\Trw\ArrayType;
 
 use \WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -16,13 +16,13 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\OrderLine[]
+     * @var \AceParts\Trw\StructType\OrderLine[]
      */
     public $OrderLine;
     /**
      * Constructor method for ArrayOfOrderLine
      * @uses ArrayOfOrderLine::setOrderLine()
-     * @param \StructType\OrderLine[] $orderLine
+     * @param \AceParts\Trw\StructType\OrderLine[] $orderLine
      */
     public function __construct(array $orderLine = array())
     {
@@ -34,7 +34,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\OrderLine[]|null
+     * @return \AceParts\Trw\StructType\OrderLine[]|null
      */
     public function getOrderLine()
     {
@@ -52,12 +52,12 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfOrderLineOrderLineItem) {
             // validation for constraint: itemType
-            if (!$arrayOfOrderLineOrderLineItem instanceof \StructType\OrderLine) {
+            if (!$arrayOfOrderLineOrderLineItem instanceof \AceParts\Trw\StructType\OrderLine) {
                 $invalidValues[] = is_object($arrayOfOrderLineOrderLineItem) ? get_class($arrayOfOrderLineOrderLineItem) : sprintf('%s(%s)', gettype($arrayOfOrderLineOrderLineItem), var_export($arrayOfOrderLineOrderLineItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The OrderLine property can only contain items of type \StructType\OrderLine, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The OrderLine property can only contain items of type \AceParts\Trw\StructType\OrderLine, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         return $message;
@@ -67,8 +67,8 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws \InvalidArgumentException
-     * @param \StructType\OrderLine[] $orderLine
-     * @return \ArrayType\ArrayOfOrderLine
+     * @param \AceParts\Trw\StructType\OrderLine[] $orderLine
+     * @return \AceParts\Trw\ArrayType\ArrayOfOrderLine
      */
     public function setOrderLine(array $orderLine = array())
     {
@@ -86,14 +86,14 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
     /**
      * Add item to OrderLine value
      * @throws \InvalidArgumentException
-     * @param \StructType\OrderLine $item
-     * @return \ArrayType\ArrayOfOrderLine
+     * @param \AceParts\Trw\StructType\OrderLine $item
+     * @return \AceParts\Trw\ArrayType\ArrayOfOrderLine
      */
-    public function addToOrderLine(\StructType\OrderLine $item)
+    public function addToOrderLine(\AceParts\Trw\StructType\OrderLine $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\OrderLine) {
-            throw new \InvalidArgumentException(sprintf('The OrderLine property can only contain items of type \StructType\OrderLine, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \AceParts\Trw\StructType\OrderLine) {
+            throw new \InvalidArgumentException(sprintf('The OrderLine property can only contain items of type \AceParts\Trw\StructType\OrderLine, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->OrderLine[] = $item;
         return $this;
@@ -101,7 +101,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\OrderLine|null
+     * @return \AceParts\Trw\StructType\OrderLine|null
      */
     public function current()
     {
@@ -111,7 +111,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\OrderLine|null
+     * @return \AceParts\Trw\StructType\OrderLine|null
      */
     public function item($index)
     {
@@ -120,7 +120,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\OrderLine|null
+     * @return \AceParts\Trw\StructType\OrderLine|null
      */
     public function first()
     {
@@ -129,7 +129,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\OrderLine|null
+     * @return \AceParts\Trw\StructType\OrderLine|null
      */
     public function last()
     {
@@ -139,7 +139,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\OrderLine|null
+     * @return \AceParts\Trw\StructType\OrderLine|null
      */
     public function offsetGet($offset)
     {
@@ -160,7 +160,7 @@ class ArrayOfOrderLine extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::__set_state()
      * @uses AbstractStructArrayBase::__set_state()
      * @param array $array the exported values
-     * @return \ArrayType\ArrayOfOrderLine
+     * @return \AceParts\Trw\ArrayType\ArrayOfOrderLine
      */
     public static function __set_state(array $array)
     {

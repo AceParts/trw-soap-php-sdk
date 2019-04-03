@@ -1,6 +1,6 @@
 <?php
 
-namespace ServiceType;
+namespace AceParts\Trw\ServiceType;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -16,10 +16,10 @@ class Get extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetShippingAddresses $parameters
-     * @return \StructType\GetShippingAddressesResponse|bool
+     * @param \AceParts\Trw\StructType\GetShippingAddresses $parameters
+     * @return \AceParts\Trw\StructType\GetShippingAddressesResponse|bool
      */
-    public function getShippingAddresses(\StructType\GetShippingAddresses $parameters)
+    public function getShippingAddresses(\AceParts\Trw\StructType\GetShippingAddresses $parameters)
     {
         try {
             $this->setResult($this->getSoapClient()->getShippingAddresses($parameters));
@@ -35,10 +35,10 @@ class Get extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetStockAvailability $parameters
-     * @return \StructType\GetStockAvailabilityResponse|bool
+     * @param \AceParts\Trw\StructType\GetStockAvailability $parameters
+     * @return \AceParts\Trw\StructType\GetStockAvailabilityResponse|bool
      */
-    public function getStockAvailability(\StructType\GetStockAvailability $parameters)
+    public function getStockAvailability(\AceParts\Trw\StructType\GetStockAvailability $parameters)
     {
         try {
             $this->setResult($this->getSoapClient()->getStockAvailability($parameters));
@@ -54,10 +54,10 @@ class Get extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetStockPrice $parameters
-     * @return \StructType\GetStockPriceResponse|bool
+     * @param \AceParts\Trw\StructType\GetStockPrice $parameters
+     * @return \AceParts\Trw\StructType\GetStockPriceResponse|bool
      */
-    public function getStockPrice(\StructType\GetStockPrice $parameters)
+    public function getStockPrice(\AceParts\Trw\StructType\GetStockPrice $parameters)
     {
         try {
             $this->setResult($this->getSoapClient()->getStockPrice($parameters));
@@ -73,10 +73,10 @@ class Get extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\GetTransportMethods $parameters
-     * @return \StructType\GetTransportMethodsResponse|bool
+     * @param \AceParts\Trw\StructType\GetTransportMethods $parameters
+     * @return \AceParts\Trw\StructType\GetTransportMethodsResponse|bool
      */
-    public function getTransportMethods(\StructType\GetTransportMethods $parameters)
+    public function getTransportMethods(\AceParts\Trw\StructType\GetTransportMethods $parameters)
     {
         try {
             $this->setResult($this->getSoapClient()->getTransportMethods($parameters));
@@ -89,7 +89,7 @@ class Get extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\GetShippingAddressesResponse|\StructType\GetStockAvailabilityResponse|\StructType\GetStockPriceResponse|\StructType\GetTransportMethodsResponse
+     * @return \AceParts\Trw\StructType\GetShippingAddressesResponse|\AceParts\Trw\StructType\GetStockAvailabilityResponse|\AceParts\Trw\StructType\GetStockPriceResponse|\AceParts\Trw\StructType\GetTransportMethodsResponse
      */
     public function getResult()
     {

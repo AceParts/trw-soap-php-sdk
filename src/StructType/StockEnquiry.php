@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,7 +15,7 @@ class StockEnquiry extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -39,11 +39,11 @@ class StockEnquiry extends AbstractStructBase
      * @uses StockEnquiry::setExtensionData()
      * @uses StockEnquiry::setPartNumber()
      * @uses StockEnquiry::setQuantity()
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $partNumber
      * @param string $quantity
      */
-    public function __construct(\StructType\ExtensionDataObject $extensionData = null, $partNumber = null, $quantity = null)
+    public function __construct(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $partNumber = null, $quantity = null)
     {
         $this
             ->setExtensionData($extensionData)
@@ -52,7 +52,7 @@ class StockEnquiry extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -60,10 +60,10 @@ class StockEnquiry extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\StockEnquiry
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\StockEnquiry
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -79,7 +79,7 @@ class StockEnquiry extends AbstractStructBase
     /**
      * Set PartNumber value
      * @param string $partNumber
-     * @return \StructType\StockEnquiry
+     * @return \AceParts\Trw\StructType\StockEnquiry
      */
     public function setPartNumber($partNumber = null)
     {
@@ -101,7 +101,7 @@ class StockEnquiry extends AbstractStructBase
     /**
      * Set Quantity value
      * @param string $quantity
-     * @return \StructType\StockEnquiry
+     * @return \AceParts\Trw\StructType\StockEnquiry
      */
     public function setQuantity($quantity = null)
     {
@@ -118,7 +118,7 @@ class StockEnquiry extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\StockEnquiry
+     * @return \AceParts\Trw\StructType\StockEnquiry
      */
     public static function __set_state(array $array)
     {

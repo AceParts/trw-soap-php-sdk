@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class StockPriceResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -55,7 +55,7 @@ class StockPriceResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfStockPrice
+     * @var \AceParts\Trw\ArrayType\ArrayOfStockPrice
      */
     public $StockPrice;
     /**
@@ -67,13 +67,13 @@ class StockPriceResponse extends AbstractStructBase
      * @uses StockPriceResponse::setCustomerAccount()
      * @uses StockPriceResponse::setStockPrice()
      * @param bool $responseEmpty
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $responseStatus
      * @param string $responseMessage
      * @param string $customerAccount
-     * @param \ArrayType\ArrayOfStockPrice $stockPrice
+     * @param \AceParts\Trw\ArrayType\ArrayOfStockPrice $stockPrice
      */
-    public function __construct($responseEmpty = null, \StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \ArrayType\ArrayOfStockPrice $stockPrice = null)
+    public function __construct($responseEmpty = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \AceParts\Trw\ArrayType\ArrayOfStockPrice $stockPrice = null)
     {
         $this
             ->setResponseEmpty($responseEmpty)
@@ -94,7 +94,7 @@ class StockPriceResponse extends AbstractStructBase
     /**
      * Set ResponseEmpty value
      * @param bool $responseEmpty
-     * @return \StructType\StockPriceResponse
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
     public function setResponseEmpty($responseEmpty = null)
     {
@@ -107,7 +107,7 @@ class StockPriceResponse extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -115,10 +115,10 @@ class StockPriceResponse extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\StockPriceResponse
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -134,7 +134,7 @@ class StockPriceResponse extends AbstractStructBase
     /**
      * Set ResponseStatus value
      * @param string $responseStatus
-     * @return \StructType\StockPriceResponse
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
     public function setResponseStatus($responseStatus = null)
     {
@@ -156,7 +156,7 @@ class StockPriceResponse extends AbstractStructBase
     /**
      * Set ResponseMessage value
      * @param string $responseMessage
-     * @return \StructType\StockPriceResponse
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
     public function setResponseMessage($responseMessage = null)
     {
@@ -178,7 +178,7 @@ class StockPriceResponse extends AbstractStructBase
     /**
      * Set CustomerAccount value
      * @param string $customerAccount
-     * @return \StructType\StockPriceResponse
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
     public function setCustomerAccount($customerAccount = null)
     {
@@ -191,7 +191,7 @@ class StockPriceResponse extends AbstractStructBase
     }
     /**
      * Get StockPrice value
-     * @return \ArrayType\ArrayOfStockPrice|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockPrice|null
      */
     public function getStockPrice()
     {
@@ -199,10 +199,10 @@ class StockPriceResponse extends AbstractStructBase
     }
     /**
      * Set StockPrice value
-     * @param \ArrayType\ArrayOfStockPrice $stockPrice
-     * @return \StructType\StockPriceResponse
+     * @param \AceParts\Trw\ArrayType\ArrayOfStockPrice $stockPrice
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
-    public function setStockPrice(\ArrayType\ArrayOfStockPrice $stockPrice = null)
+    public function setStockPrice(\AceParts\Trw\ArrayType\ArrayOfStockPrice $stockPrice = null)
     {
         $this->StockPrice = $stockPrice;
         return $this;
@@ -213,7 +213,7 @@ class StockPriceResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\StockPriceResponse
+     * @return \AceParts\Trw\StructType\StockPriceResponse
      */
     public static function __set_state(array $array)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -31,7 +31,7 @@ class OrderResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -95,7 +95,7 @@ class OrderResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfOrderLine
+     * @var \AceParts\Trw\ArrayType\ArrayOfOrderLine
      */
     public $OrderLines;
     /**
@@ -113,7 +113,7 @@ class OrderResponse extends AbstractStructBase
      * @uses OrderResponse::setOrderLines()
      * @param bool $responseEmpty
      * @param float $totalOrderValue
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $responseStatus
      * @param string $responseMessage
      * @param string $customerAccount
@@ -121,9 +121,9 @@ class OrderResponse extends AbstractStructBase
      * @param string $shipToCode
      * @param string $orderTypeCode
      * @param string $customerReference
-     * @param \ArrayType\ArrayOfOrderLine $orderLines
+     * @param \AceParts\Trw\ArrayType\ArrayOfOrderLine $orderLines
      */
-    public function __construct($responseEmpty = null, $totalOrderValue = null, \StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, $orderNumber = null, $shipToCode = null, $orderTypeCode = null, $customerReference = null, \ArrayType\ArrayOfOrderLine $orderLines = null)
+    public function __construct($responseEmpty = null, $totalOrderValue = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, $orderNumber = null, $shipToCode = null, $orderTypeCode = null, $customerReference = null, \AceParts\Trw\ArrayType\ArrayOfOrderLine $orderLines = null)
     {
         $this
             ->setResponseEmpty($responseEmpty)
@@ -149,7 +149,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set ResponseEmpty value
      * @param bool $responseEmpty
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setResponseEmpty($responseEmpty = null)
     {
@@ -171,7 +171,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set TotalOrderValue value
      * @param float $totalOrderValue
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setTotalOrderValue($totalOrderValue = null)
     {
@@ -184,7 +184,7 @@ class OrderResponse extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -192,10 +192,10 @@ class OrderResponse extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\OrderResponse
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -211,7 +211,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set ResponseStatus value
      * @param string $responseStatus
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setResponseStatus($responseStatus = null)
     {
@@ -233,7 +233,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set ResponseMessage value
      * @param string $responseMessage
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setResponseMessage($responseMessage = null)
     {
@@ -255,7 +255,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set CustomerAccount value
      * @param string $customerAccount
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setCustomerAccount($customerAccount = null)
     {
@@ -277,7 +277,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set OrderNumber value
      * @param string $orderNumber
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setOrderNumber($orderNumber = null)
     {
@@ -299,7 +299,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set ShipToCode value
      * @param string $shipToCode
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setShipToCode($shipToCode = null)
     {
@@ -321,7 +321,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set OrderTypeCode value
      * @param string $orderTypeCode
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setOrderTypeCode($orderTypeCode = null)
     {
@@ -343,7 +343,7 @@ class OrderResponse extends AbstractStructBase
     /**
      * Set CustomerReference value
      * @param string $customerReference
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public function setCustomerReference($customerReference = null)
     {
@@ -356,7 +356,7 @@ class OrderResponse extends AbstractStructBase
     }
     /**
      * Get OrderLines value
-     * @return \ArrayType\ArrayOfOrderLine|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfOrderLine|null
      */
     public function getOrderLines()
     {
@@ -364,10 +364,10 @@ class OrderResponse extends AbstractStructBase
     }
     /**
      * Set OrderLines value
-     * @param \ArrayType\ArrayOfOrderLine $orderLines
-     * @return \StructType\OrderResponse
+     * @param \AceParts\Trw\ArrayType\ArrayOfOrderLine $orderLines
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
-    public function setOrderLines(\ArrayType\ArrayOfOrderLine $orderLines = null)
+    public function setOrderLines(\AceParts\Trw\ArrayType\ArrayOfOrderLine $orderLines = null)
     {
         $this->OrderLines = $orderLines;
         return $this;
@@ -378,7 +378,7 @@ class OrderResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\OrderResponse
+     * @return \AceParts\Trw\StructType\OrderResponse
      */
     public static function __set_state(array $array)
     {

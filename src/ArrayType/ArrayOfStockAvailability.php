@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayType;
+namespace AceParts\Trw\ArrayType;
 
 use \WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -16,13 +16,13 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\StockAvailability[]
+     * @var \AceParts\Trw\StructType\StockAvailability[]
      */
     public $StockAvailability;
     /**
      * Constructor method for ArrayOfStockAvailability
      * @uses ArrayOfStockAvailability::setStockAvailability()
-     * @param \StructType\StockAvailability[] $stockAvailability
+     * @param \AceParts\Trw\StructType\StockAvailability[] $stockAvailability
      */
     public function __construct(array $stockAvailability = array())
     {
@@ -34,7 +34,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\StockAvailability[]|null
+     * @return \AceParts\Trw\StructType\StockAvailability[]|null
      */
     public function getStockAvailability()
     {
@@ -52,12 +52,12 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfStockAvailabilityStockAvailabilityItem) {
             // validation for constraint: itemType
-            if (!$arrayOfStockAvailabilityStockAvailabilityItem instanceof \StructType\StockAvailability) {
+            if (!$arrayOfStockAvailabilityStockAvailabilityItem instanceof \AceParts\Trw\StructType\StockAvailability) {
                 $invalidValues[] = is_object($arrayOfStockAvailabilityStockAvailabilityItem) ? get_class($arrayOfStockAvailabilityStockAvailabilityItem) : sprintf('%s(%s)', gettype($arrayOfStockAvailabilityStockAvailabilityItem), var_export($arrayOfStockAvailabilityStockAvailabilityItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The StockAvailability property can only contain items of type \StructType\StockAvailability, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The StockAvailability property can only contain items of type \AceParts\Trw\StructType\StockAvailability, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         return $message;
@@ -67,8 +67,8 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws \InvalidArgumentException
-     * @param \StructType\StockAvailability[] $stockAvailability
-     * @return \ArrayType\ArrayOfStockAvailability
+     * @param \AceParts\Trw\StructType\StockAvailability[] $stockAvailability
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockAvailability
      */
     public function setStockAvailability(array $stockAvailability = array())
     {
@@ -86,14 +86,14 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
     /**
      * Add item to StockAvailability value
      * @throws \InvalidArgumentException
-     * @param \StructType\StockAvailability $item
-     * @return \ArrayType\ArrayOfStockAvailability
+     * @param \AceParts\Trw\StructType\StockAvailability $item
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockAvailability
      */
-    public function addToStockAvailability(\StructType\StockAvailability $item)
+    public function addToStockAvailability(\AceParts\Trw\StructType\StockAvailability $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\StockAvailability) {
-            throw new \InvalidArgumentException(sprintf('The StockAvailability property can only contain items of type \StructType\StockAvailability, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \AceParts\Trw\StructType\StockAvailability) {
+            throw new \InvalidArgumentException(sprintf('The StockAvailability property can only contain items of type \AceParts\Trw\StructType\StockAvailability, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->StockAvailability[] = $item;
         return $this;
@@ -101,7 +101,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\StockAvailability|null
+     * @return \AceParts\Trw\StructType\StockAvailability|null
      */
     public function current()
     {
@@ -111,7 +111,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\StockAvailability|null
+     * @return \AceParts\Trw\StructType\StockAvailability|null
      */
     public function item($index)
     {
@@ -120,7 +120,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\StockAvailability|null
+     * @return \AceParts\Trw\StructType\StockAvailability|null
      */
     public function first()
     {
@@ -129,7 +129,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\StockAvailability|null
+     * @return \AceParts\Trw\StructType\StockAvailability|null
      */
     public function last()
     {
@@ -139,7 +139,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\StockAvailability|null
+     * @return \AceParts\Trw\StructType\StockAvailability|null
      */
     public function offsetGet($offset)
     {
@@ -160,7 +160,7 @@ class ArrayOfStockAvailability extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::__set_state()
      * @uses AbstractStructArrayBase::__set_state()
      * @param array $array the exported values
-     * @return \ArrayType\ArrayOfStockAvailability
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockAvailability
      */
     public static function __set_state(array $array)
     {

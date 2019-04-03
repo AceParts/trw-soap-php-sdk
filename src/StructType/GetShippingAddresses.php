@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetShippingAddresses extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ShipToRequest
+     * @var \AceParts\Trw\StructType\ShipToRequest
      */
     public $request;
     /**
      * Constructor method for getShippingAddresses
      * @uses GetShippingAddresses::setRequest()
-     * @param \StructType\ShipToRequest $request
+     * @param \AceParts\Trw\StructType\ShipToRequest $request
      */
-    public function __construct(\StructType\ShipToRequest $request = null)
+    public function __construct(\AceParts\Trw\StructType\ShipToRequest $request = null)
     {
         $this
             ->setRequest($request);
     }
     /**
      * Get request value
-     * @return \StructType\ShipToRequest|null
+     * @return \AceParts\Trw\StructType\ShipToRequest|null
      */
     public function getRequest()
     {
@@ -38,10 +38,10 @@ class GetShippingAddresses extends AbstractStructBase
     }
     /**
      * Set request value
-     * @param \StructType\ShipToRequest $request
-     * @return \StructType\GetShippingAddresses
+     * @param \AceParts\Trw\StructType\ShipToRequest $request
+     * @return \AceParts\Trw\StructType\GetShippingAddresses
      */
-    public function setRequest(\StructType\ShipToRequest $request = null)
+    public function setRequest(\AceParts\Trw\StructType\ShipToRequest $request = null)
     {
         $this->request = $request;
         return $this;
@@ -52,7 +52,7 @@ class GetShippingAddresses extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetShippingAddresses
+     * @return \AceParts\Trw\StructType\GetShippingAddresses
      */
     public static function __set_state(array $array)
     {

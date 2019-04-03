@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetTransportMethodsResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\TransportMethodResponse
+     * @var \AceParts\Trw\StructType\TransportMethodResponse
      */
     public $getTransportMethodsResult;
     /**
      * Constructor method for getTransportMethodsResponse
      * @uses GetTransportMethodsResponse::setGetTransportMethodsResult()
-     * @param \StructType\TransportMethodResponse $getTransportMethodsResult
+     * @param \AceParts\Trw\StructType\TransportMethodResponse $getTransportMethodsResult
      */
-    public function __construct(\StructType\TransportMethodResponse $getTransportMethodsResult = null)
+    public function __construct(\AceParts\Trw\StructType\TransportMethodResponse $getTransportMethodsResult = null)
     {
         $this
             ->setGetTransportMethodsResult($getTransportMethodsResult);
     }
     /**
      * Get getTransportMethodsResult value
-     * @return \StructType\TransportMethodResponse|null
+     * @return \AceParts\Trw\StructType\TransportMethodResponse|null
      */
     public function getGetTransportMethodsResult()
     {
@@ -38,10 +38,10 @@ class GetTransportMethodsResponse extends AbstractStructBase
     }
     /**
      * Set getTransportMethodsResult value
-     * @param \StructType\TransportMethodResponse $getTransportMethodsResult
-     * @return \StructType\GetTransportMethodsResponse
+     * @param \AceParts\Trw\StructType\TransportMethodResponse $getTransportMethodsResult
+     * @return \AceParts\Trw\StructType\GetTransportMethodsResponse
      */
-    public function setGetTransportMethodsResult(\StructType\TransportMethodResponse $getTransportMethodsResult = null)
+    public function setGetTransportMethodsResult(\AceParts\Trw\StructType\TransportMethodResponse $getTransportMethodsResult = null)
     {
         $this->getTransportMethodsResult = $getTransportMethodsResult;
         return $this;
@@ -52,7 +52,7 @@ class GetTransportMethodsResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetTransportMethodsResponse
+     * @return \AceParts\Trw\StructType\GetTransportMethodsResponse
      */
     public static function __set_state(array $array)
     {

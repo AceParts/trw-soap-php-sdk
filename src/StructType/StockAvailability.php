@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -39,7 +39,7 @@ class StockAvailability extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -79,7 +79,7 @@ class StockAvailability extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfStatusCode
+     * @var \AceParts\Trw\ArrayType\ArrayOfStatusCode
      */
     public $DetailStatus;
     /**
@@ -96,14 +96,14 @@ class StockAvailability extends AbstractStructBase
      * @param int $lineNumber
      * @param int $enteredQuantity
      * @param int $suppliedQuantity
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $enteredPartNumber
      * @param string $suppliedPartNumber
      * @param string $availabilityStatus
      * @param string $availabilityStatusImage
-     * @param \ArrayType\ArrayOfStatusCode $detailStatus
+     * @param \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus
      */
-    public function __construct($lineNumber = null, $enteredQuantity = null, $suppliedQuantity = null, \StructType\ExtensionDataObject $extensionData = null, $enteredPartNumber = null, $suppliedPartNumber = null, $availabilityStatus = null, $availabilityStatusImage = null, \ArrayType\ArrayOfStatusCode $detailStatus = null)
+    public function __construct($lineNumber = null, $enteredQuantity = null, $suppliedQuantity = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $enteredPartNumber = null, $suppliedPartNumber = null, $availabilityStatus = null, $availabilityStatusImage = null, \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus = null)
     {
         $this
             ->setLineNumber($lineNumber)
@@ -127,7 +127,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -149,7 +149,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set EnteredQuantity value
      * @param int $enteredQuantity
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setEnteredQuantity($enteredQuantity = null)
     {
@@ -171,7 +171,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set SuppliedQuantity value
      * @param int $suppliedQuantity
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setSuppliedQuantity($suppliedQuantity = null)
     {
@@ -184,7 +184,7 @@ class StockAvailability extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -192,10 +192,10 @@ class StockAvailability extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\StockAvailability
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -211,7 +211,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set EnteredPartNumber value
      * @param string $enteredPartNumber
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setEnteredPartNumber($enteredPartNumber = null)
     {
@@ -233,7 +233,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set SuppliedPartNumber value
      * @param string $suppliedPartNumber
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setSuppliedPartNumber($suppliedPartNumber = null)
     {
@@ -255,7 +255,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set AvailabilityStatus value
      * @param string $availabilityStatus
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setAvailabilityStatus($availabilityStatus = null)
     {
@@ -277,7 +277,7 @@ class StockAvailability extends AbstractStructBase
     /**
      * Set AvailabilityStatusImage value
      * @param string $availabilityStatusImage
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public function setAvailabilityStatusImage($availabilityStatusImage = null)
     {
@@ -290,7 +290,7 @@ class StockAvailability extends AbstractStructBase
     }
     /**
      * Get DetailStatus value
-     * @return \ArrayType\ArrayOfStatusCode|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfStatusCode|null
      */
     public function getDetailStatus()
     {
@@ -298,10 +298,10 @@ class StockAvailability extends AbstractStructBase
     }
     /**
      * Set DetailStatus value
-     * @param \ArrayType\ArrayOfStatusCode $detailStatus
-     * @return \StructType\StockAvailability
+     * @param \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
-    public function setDetailStatus(\ArrayType\ArrayOfStatusCode $detailStatus = null)
+    public function setDetailStatus(\AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus = null)
     {
         $this->DetailStatus = $detailStatus;
         return $this;
@@ -312,7 +312,7 @@ class StockAvailability extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\StockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailability
      */
     public static function __set_state(array $array)
     {

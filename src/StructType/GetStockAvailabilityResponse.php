@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetStockAvailabilityResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\StockAvailabilityResponse
+     * @var \AceParts\Trw\StructType\StockAvailabilityResponse
      */
     public $getStockAvailabilityResult;
     /**
      * Constructor method for getStockAvailabilityResponse
      * @uses GetStockAvailabilityResponse::setGetStockAvailabilityResult()
-     * @param \StructType\StockAvailabilityResponse $getStockAvailabilityResult
+     * @param \AceParts\Trw\StructType\StockAvailabilityResponse $getStockAvailabilityResult
      */
-    public function __construct(\StructType\StockAvailabilityResponse $getStockAvailabilityResult = null)
+    public function __construct(\AceParts\Trw\StructType\StockAvailabilityResponse $getStockAvailabilityResult = null)
     {
         $this
             ->setGetStockAvailabilityResult($getStockAvailabilityResult);
     }
     /**
      * Get getStockAvailabilityResult value
-     * @return \StructType\StockAvailabilityResponse|null
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse|null
      */
     public function getGetStockAvailabilityResult()
     {
@@ -38,10 +38,10 @@ class GetStockAvailabilityResponse extends AbstractStructBase
     }
     /**
      * Set getStockAvailabilityResult value
-     * @param \StructType\StockAvailabilityResponse $getStockAvailabilityResult
-     * @return \StructType\GetStockAvailabilityResponse
+     * @param \AceParts\Trw\StructType\StockAvailabilityResponse $getStockAvailabilityResult
+     * @return \AceParts\Trw\StructType\GetStockAvailabilityResponse
      */
-    public function setGetStockAvailabilityResult(\StructType\StockAvailabilityResponse $getStockAvailabilityResult = null)
+    public function setGetStockAvailabilityResult(\AceParts\Trw\StructType\StockAvailabilityResponse $getStockAvailabilityResult = null)
     {
         $this->getStockAvailabilityResult = $getStockAvailabilityResult;
         return $this;
@@ -52,7 +52,7 @@ class GetStockAvailabilityResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetStockAvailabilityResponse
+     * @return \AceParts\Trw\StructType\GetStockAvailabilityResponse
      */
     public static function __set_state(array $array)
     {

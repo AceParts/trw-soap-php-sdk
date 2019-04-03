@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetStockPrice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\StockPriceRequest
+     * @var \AceParts\Trw\StructType\StockPriceRequest
      */
     public $request;
     /**
      * Constructor method for getStockPrice
      * @uses GetStockPrice::setRequest()
-     * @param \StructType\StockPriceRequest $request
+     * @param \AceParts\Trw\StructType\StockPriceRequest $request
      */
-    public function __construct(\StructType\StockPriceRequest $request = null)
+    public function __construct(\AceParts\Trw\StructType\StockPriceRequest $request = null)
     {
         $this
             ->setRequest($request);
     }
     /**
      * Get request value
-     * @return \StructType\StockPriceRequest|null
+     * @return \AceParts\Trw\StructType\StockPriceRequest|null
      */
     public function getRequest()
     {
@@ -38,10 +38,10 @@ class GetStockPrice extends AbstractStructBase
     }
     /**
      * Set request value
-     * @param \StructType\StockPriceRequest $request
-     * @return \StructType\GetStockPrice
+     * @param \AceParts\Trw\StructType\StockPriceRequest $request
+     * @return \AceParts\Trw\StructType\GetStockPrice
      */
-    public function setRequest(\StructType\StockPriceRequest $request = null)
+    public function setRequest(\AceParts\Trw\StructType\StockPriceRequest $request = null)
     {
         $this->request = $request;
         return $this;
@@ -52,7 +52,7 @@ class GetStockPrice extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetStockPrice
+     * @return \AceParts\Trw\StructType\GetStockPrice
      */
     public static function __set_state(array $array)
     {

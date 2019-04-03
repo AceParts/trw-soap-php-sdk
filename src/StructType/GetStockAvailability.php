@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetStockAvailability extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\StockAvailabilityRequest
+     * @var \AceParts\Trw\StructType\StockAvailabilityRequest
      */
     public $request;
     /**
      * Constructor method for getStockAvailability
      * @uses GetStockAvailability::setRequest()
-     * @param \StructType\StockAvailabilityRequest $request
+     * @param \AceParts\Trw\StructType\StockAvailabilityRequest $request
      */
-    public function __construct(\StructType\StockAvailabilityRequest $request = null)
+    public function __construct(\AceParts\Trw\StructType\StockAvailabilityRequest $request = null)
     {
         $this
             ->setRequest($request);
     }
     /**
      * Get request value
-     * @return \StructType\StockAvailabilityRequest|null
+     * @return \AceParts\Trw\StructType\StockAvailabilityRequest|null
      */
     public function getRequest()
     {
@@ -38,10 +38,10 @@ class GetStockAvailability extends AbstractStructBase
     }
     /**
      * Set request value
-     * @param \StructType\StockAvailabilityRequest $request
-     * @return \StructType\GetStockAvailability
+     * @param \AceParts\Trw\StructType\StockAvailabilityRequest $request
+     * @return \AceParts\Trw\StructType\GetStockAvailability
      */
-    public function setRequest(\StructType\StockAvailabilityRequest $request = null)
+    public function setRequest(\AceParts\Trw\StructType\StockAvailabilityRequest $request = null)
     {
         $this->request = $request;
         return $this;
@@ -52,7 +52,7 @@ class GetStockAvailability extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetStockAvailability
+     * @return \AceParts\Trw\StructType\GetStockAvailability
      */
     public static function __set_state(array $array)
     {

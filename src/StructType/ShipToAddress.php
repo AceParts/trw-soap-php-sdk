@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class ShipToAddress extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -49,11 +49,11 @@ class ShipToAddress extends AbstractStructBase
      * @uses ShipToAddress::setShipToCode()
      * @uses ShipToAddress::setShipToName()
      * @param int $lineNumber
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $shipToCode
      * @param string $shipToName
      */
-    public function __construct($lineNumber = null, \StructType\ExtensionDataObject $extensionData = null, $shipToCode = null, $shipToName = null)
+    public function __construct($lineNumber = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $shipToCode = null, $shipToName = null)
     {
         $this
             ->setLineNumber($lineNumber)
@@ -72,7 +72,7 @@ class ShipToAddress extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \StructType\ShipToAddress
+     * @return \AceParts\Trw\StructType\ShipToAddress
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -85,7 +85,7 @@ class ShipToAddress extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -93,10 +93,10 @@ class ShipToAddress extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\ShipToAddress
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\ShipToAddress
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -112,7 +112,7 @@ class ShipToAddress extends AbstractStructBase
     /**
      * Set ShipToCode value
      * @param string $shipToCode
-     * @return \StructType\ShipToAddress
+     * @return \AceParts\Trw\StructType\ShipToAddress
      */
     public function setShipToCode($shipToCode = null)
     {
@@ -134,7 +134,7 @@ class ShipToAddress extends AbstractStructBase
     /**
      * Set ShipToName value
      * @param string $shipToName
-     * @return \StructType\ShipToAddress
+     * @return \AceParts\Trw\StructType\ShipToAddress
      */
     public function setShipToName($shipToName = null)
     {
@@ -151,7 +151,7 @@ class ShipToAddress extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\ShipToAddress
+     * @return \AceParts\Trw\StructType\ShipToAddress
      */
     public static function __set_state(array $array)
     {

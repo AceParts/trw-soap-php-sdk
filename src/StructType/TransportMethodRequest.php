@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,7 +15,7 @@ class TransportMethodRequest extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -57,13 +57,13 @@ class TransportMethodRequest extends AbstractStructBase
      * @uses TransportMethodRequest::setPassword()
      * @uses TransportMethodRequest::setCustomerAccount()
      * @uses TransportMethodRequest::setShipToCode()
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $userId
      * @param string $password
      * @param string $customerAccount
      * @param string $shipToCode
      */
-    public function __construct(\StructType\ExtensionDataObject $extensionData = null, $userId = null, $password = null, $customerAccount = null, $shipToCode = null)
+    public function __construct(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $userId = null, $password = null, $customerAccount = null, $shipToCode = null)
     {
         $this
             ->setExtensionData($extensionData)
@@ -74,7 +74,7 @@ class TransportMethodRequest extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -82,10 +82,10 @@ class TransportMethodRequest extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\TransportMethodRequest
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\TransportMethodRequest
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -101,7 +101,7 @@ class TransportMethodRequest extends AbstractStructBase
     /**
      * Set UserId value
      * @param string $userId
-     * @return \StructType\TransportMethodRequest
+     * @return \AceParts\Trw\StructType\TransportMethodRequest
      */
     public function setUserId($userId = null)
     {
@@ -123,7 +123,7 @@ class TransportMethodRequest extends AbstractStructBase
     /**
      * Set Password value
      * @param string $password
-     * @return \StructType\TransportMethodRequest
+     * @return \AceParts\Trw\StructType\TransportMethodRequest
      */
     public function setPassword($password = null)
     {
@@ -145,7 +145,7 @@ class TransportMethodRequest extends AbstractStructBase
     /**
      * Set CustomerAccount value
      * @param string $customerAccount
-     * @return \StructType\TransportMethodRequest
+     * @return \AceParts\Trw\StructType\TransportMethodRequest
      */
     public function setCustomerAccount($customerAccount = null)
     {
@@ -167,7 +167,7 @@ class TransportMethodRequest extends AbstractStructBase
     /**
      * Set ShipToCode value
      * @param string $shipToCode
-     * @return \StructType\TransportMethodRequest
+     * @return \AceParts\Trw\StructType\TransportMethodRequest
      */
     public function setShipToCode($shipToCode = null)
     {
@@ -184,7 +184,7 @@ class TransportMethodRequest extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\TransportMethodRequest
+     * @return \AceParts\Trw\StructType\TransportMethodRequest
      */
     public static function __set_state(array $array)
     {

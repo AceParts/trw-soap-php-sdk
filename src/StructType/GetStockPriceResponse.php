@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetStockPriceResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\StockPriceResponse
+     * @var \AceParts\Trw\StructType\StockPriceResponse
      */
     public $getStockPriceResult;
     /**
      * Constructor method for getStockPriceResponse
      * @uses GetStockPriceResponse::setGetStockPriceResult()
-     * @param \StructType\StockPriceResponse $getStockPriceResult
+     * @param \AceParts\Trw\StructType\StockPriceResponse $getStockPriceResult
      */
-    public function __construct(\StructType\StockPriceResponse $getStockPriceResult = null)
+    public function __construct(\AceParts\Trw\StructType\StockPriceResponse $getStockPriceResult = null)
     {
         $this
             ->setGetStockPriceResult($getStockPriceResult);
     }
     /**
      * Get getStockPriceResult value
-     * @return \StructType\StockPriceResponse|null
+     * @return \AceParts\Trw\StructType\StockPriceResponse|null
      */
     public function getGetStockPriceResult()
     {
@@ -38,10 +38,10 @@ class GetStockPriceResponse extends AbstractStructBase
     }
     /**
      * Set getStockPriceResult value
-     * @param \StructType\StockPriceResponse $getStockPriceResult
-     * @return \StructType\GetStockPriceResponse
+     * @param \AceParts\Trw\StructType\StockPriceResponse $getStockPriceResult
+     * @return \AceParts\Trw\StructType\GetStockPriceResponse
      */
-    public function setGetStockPriceResult(\StructType\StockPriceResponse $getStockPriceResult = null)
+    public function setGetStockPriceResult(\AceParts\Trw\StructType\StockPriceResponse $getStockPriceResult = null)
     {
         $this->getStockPriceResult = $getStockPriceResult;
         return $this;
@@ -52,7 +52,7 @@ class GetStockPriceResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetStockPriceResponse
+     * @return \AceParts\Trw\StructType\GetStockPriceResponse
      */
     public static function __set_state(array $array)
     {

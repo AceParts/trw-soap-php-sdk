@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayType;
+namespace AceParts\Trw\ArrayType;
 
 use \WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -16,13 +16,13 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\StockEnquiry[]
+     * @var \AceParts\Trw\StructType\StockEnquiry[]
      */
     public $StockEnquiry;
     /**
      * Constructor method for ArrayOfStockEnquiry
      * @uses ArrayOfStockEnquiry::setStockEnquiry()
-     * @param \StructType\StockEnquiry[] $stockEnquiry
+     * @param \AceParts\Trw\StructType\StockEnquiry[] $stockEnquiry
      */
     public function __construct(array $stockEnquiry = array())
     {
@@ -34,7 +34,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\StockEnquiry[]|null
+     * @return \AceParts\Trw\StructType\StockEnquiry[]|null
      */
     public function getStockEnquiry()
     {
@@ -52,12 +52,12 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfStockEnquiryStockEnquiryItem) {
             // validation for constraint: itemType
-            if (!$arrayOfStockEnquiryStockEnquiryItem instanceof \StructType\StockEnquiry) {
+            if (!$arrayOfStockEnquiryStockEnquiryItem instanceof \AceParts\Trw\StructType\StockEnquiry) {
                 $invalidValues[] = is_object($arrayOfStockEnquiryStockEnquiryItem) ? get_class($arrayOfStockEnquiryStockEnquiryItem) : sprintf('%s(%s)', gettype($arrayOfStockEnquiryStockEnquiryItem), var_export($arrayOfStockEnquiryStockEnquiryItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The StockEnquiry property can only contain items of type \StructType\StockEnquiry, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The StockEnquiry property can only contain items of type \AceParts\Trw\StructType\StockEnquiry, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         return $message;
@@ -67,8 +67,8 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws \InvalidArgumentException
-     * @param \StructType\StockEnquiry[] $stockEnquiry
-     * @return \ArrayType\ArrayOfStockEnquiry
+     * @param \AceParts\Trw\StructType\StockEnquiry[] $stockEnquiry
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockEnquiry
      */
     public function setStockEnquiry(array $stockEnquiry = array())
     {
@@ -86,14 +86,14 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
     /**
      * Add item to StockEnquiry value
      * @throws \InvalidArgumentException
-     * @param \StructType\StockEnquiry $item
-     * @return \ArrayType\ArrayOfStockEnquiry
+     * @param \AceParts\Trw\StructType\StockEnquiry $item
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockEnquiry
      */
-    public function addToStockEnquiry(\StructType\StockEnquiry $item)
+    public function addToStockEnquiry(\AceParts\Trw\StructType\StockEnquiry $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\StockEnquiry) {
-            throw new \InvalidArgumentException(sprintf('The StockEnquiry property can only contain items of type \StructType\StockEnquiry, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \AceParts\Trw\StructType\StockEnquiry) {
+            throw new \InvalidArgumentException(sprintf('The StockEnquiry property can only contain items of type \AceParts\Trw\StructType\StockEnquiry, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->StockEnquiry[] = $item;
         return $this;
@@ -101,7 +101,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\StockEnquiry|null
+     * @return \AceParts\Trw\StructType\StockEnquiry|null
      */
     public function current()
     {
@@ -111,7 +111,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\StockEnquiry|null
+     * @return \AceParts\Trw\StructType\StockEnquiry|null
      */
     public function item($index)
     {
@@ -120,7 +120,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\StockEnquiry|null
+     * @return \AceParts\Trw\StructType\StockEnquiry|null
      */
     public function first()
     {
@@ -129,7 +129,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\StockEnquiry|null
+     * @return \AceParts\Trw\StructType\StockEnquiry|null
      */
     public function last()
     {
@@ -139,7 +139,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\StockEnquiry|null
+     * @return \AceParts\Trw\StructType\StockEnquiry|null
      */
     public function offsetGet($offset)
     {
@@ -160,7 +160,7 @@ class ArrayOfStockEnquiry extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::__set_state()
      * @uses AbstractStructArrayBase::__set_state()
      * @param array $array the exported values
-     * @return \ArrayType\ArrayOfStockEnquiry
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockEnquiry
      */
     public static function __set_state(array $array)
     {

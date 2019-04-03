@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class TransportMethodResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -55,7 +55,7 @@ class TransportMethodResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfTransportMethod
+     * @var \AceParts\Trw\ArrayType\ArrayOfTransportMethod
      */
     public $TransportMethods;
     /**
@@ -67,13 +67,13 @@ class TransportMethodResponse extends AbstractStructBase
      * @uses TransportMethodResponse::setCustomerAccount()
      * @uses TransportMethodResponse::setTransportMethods()
      * @param bool $responseEmpty
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $responseStatus
      * @param string $responseMessage
      * @param string $customerAccount
-     * @param \ArrayType\ArrayOfTransportMethod $transportMethods
+     * @param \AceParts\Trw\ArrayType\ArrayOfTransportMethod $transportMethods
      */
-    public function __construct($responseEmpty = null, \StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \ArrayType\ArrayOfTransportMethod $transportMethods = null)
+    public function __construct($responseEmpty = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \AceParts\Trw\ArrayType\ArrayOfTransportMethod $transportMethods = null)
     {
         $this
             ->setResponseEmpty($responseEmpty)
@@ -94,7 +94,7 @@ class TransportMethodResponse extends AbstractStructBase
     /**
      * Set ResponseEmpty value
      * @param bool $responseEmpty
-     * @return \StructType\TransportMethodResponse
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
     public function setResponseEmpty($responseEmpty = null)
     {
@@ -107,7 +107,7 @@ class TransportMethodResponse extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -115,10 +115,10 @@ class TransportMethodResponse extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\TransportMethodResponse
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -134,7 +134,7 @@ class TransportMethodResponse extends AbstractStructBase
     /**
      * Set ResponseStatus value
      * @param string $responseStatus
-     * @return \StructType\TransportMethodResponse
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
     public function setResponseStatus($responseStatus = null)
     {
@@ -156,7 +156,7 @@ class TransportMethodResponse extends AbstractStructBase
     /**
      * Set ResponseMessage value
      * @param string $responseMessage
-     * @return \StructType\TransportMethodResponse
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
     public function setResponseMessage($responseMessage = null)
     {
@@ -178,7 +178,7 @@ class TransportMethodResponse extends AbstractStructBase
     /**
      * Set CustomerAccount value
      * @param string $customerAccount
-     * @return \StructType\TransportMethodResponse
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
     public function setCustomerAccount($customerAccount = null)
     {
@@ -191,7 +191,7 @@ class TransportMethodResponse extends AbstractStructBase
     }
     /**
      * Get TransportMethods value
-     * @return \ArrayType\ArrayOfTransportMethod|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfTransportMethod|null
      */
     public function getTransportMethods()
     {
@@ -199,10 +199,10 @@ class TransportMethodResponse extends AbstractStructBase
     }
     /**
      * Set TransportMethods value
-     * @param \ArrayType\ArrayOfTransportMethod $transportMethods
-     * @return \StructType\TransportMethodResponse
+     * @param \AceParts\Trw\ArrayType\ArrayOfTransportMethod $transportMethods
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
-    public function setTransportMethods(\ArrayType\ArrayOfTransportMethod $transportMethods = null)
+    public function setTransportMethods(\AceParts\Trw\ArrayType\ArrayOfTransportMethod $transportMethods = null)
     {
         $this->TransportMethods = $transportMethods;
         return $this;
@@ -213,7 +213,7 @@ class TransportMethodResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\TransportMethodResponse
+     * @return \AceParts\Trw\StructType\TransportMethodResponse
      */
     public static function __set_state(array $array)
     {

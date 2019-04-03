@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class ShipToResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -55,7 +55,7 @@ class ShipToResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfShipToAddress
+     * @var \AceParts\Trw\ArrayType\ArrayOfShipToAddress
      */
     public $ShipToAddresses;
     /**
@@ -67,13 +67,13 @@ class ShipToResponse extends AbstractStructBase
      * @uses ShipToResponse::setCustomerAccount()
      * @uses ShipToResponse::setShipToAddresses()
      * @param bool $responseEmpty
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $responseStatus
      * @param string $responseMessage
      * @param string $customerAccount
-     * @param \ArrayType\ArrayOfShipToAddress $shipToAddresses
+     * @param \AceParts\Trw\ArrayType\ArrayOfShipToAddress $shipToAddresses
      */
-    public function __construct($responseEmpty = null, \StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \ArrayType\ArrayOfShipToAddress $shipToAddresses = null)
+    public function __construct($responseEmpty = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \AceParts\Trw\ArrayType\ArrayOfShipToAddress $shipToAddresses = null)
     {
         $this
             ->setResponseEmpty($responseEmpty)
@@ -94,7 +94,7 @@ class ShipToResponse extends AbstractStructBase
     /**
      * Set ResponseEmpty value
      * @param bool $responseEmpty
-     * @return \StructType\ShipToResponse
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
     public function setResponseEmpty($responseEmpty = null)
     {
@@ -107,7 +107,7 @@ class ShipToResponse extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -115,10 +115,10 @@ class ShipToResponse extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\ShipToResponse
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -134,7 +134,7 @@ class ShipToResponse extends AbstractStructBase
     /**
      * Set ResponseStatus value
      * @param string $responseStatus
-     * @return \StructType\ShipToResponse
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
     public function setResponseStatus($responseStatus = null)
     {
@@ -156,7 +156,7 @@ class ShipToResponse extends AbstractStructBase
     /**
      * Set ResponseMessage value
      * @param string $responseMessage
-     * @return \StructType\ShipToResponse
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
     public function setResponseMessage($responseMessage = null)
     {
@@ -178,7 +178,7 @@ class ShipToResponse extends AbstractStructBase
     /**
      * Set CustomerAccount value
      * @param string $customerAccount
-     * @return \StructType\ShipToResponse
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
     public function setCustomerAccount($customerAccount = null)
     {
@@ -191,7 +191,7 @@ class ShipToResponse extends AbstractStructBase
     }
     /**
      * Get ShipToAddresses value
-     * @return \ArrayType\ArrayOfShipToAddress|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfShipToAddress|null
      */
     public function getShipToAddresses()
     {
@@ -199,10 +199,10 @@ class ShipToResponse extends AbstractStructBase
     }
     /**
      * Set ShipToAddresses value
-     * @param \ArrayType\ArrayOfShipToAddress $shipToAddresses
-     * @return \StructType\ShipToResponse
+     * @param \AceParts\Trw\ArrayType\ArrayOfShipToAddress $shipToAddresses
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
-    public function setShipToAddresses(\ArrayType\ArrayOfShipToAddress $shipToAddresses = null)
+    public function setShipToAddresses(\AceParts\Trw\ArrayType\ArrayOfShipToAddress $shipToAddresses = null)
     {
         $this->ShipToAddresses = $shipToAddresses;
         return $this;
@@ -213,7 +213,7 @@ class ShipToResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\ShipToResponse
+     * @return \AceParts\Trw\StructType\ShipToResponse
      */
     public static function __set_state(array $array)
     {

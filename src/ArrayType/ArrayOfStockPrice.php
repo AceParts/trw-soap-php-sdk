@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayType;
+namespace AceParts\Trw\ArrayType;
 
 use \WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -16,13 +16,13 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\StockPrice[]
+     * @var \AceParts\Trw\StructType\StockPrice[]
      */
     public $StockPrice;
     /**
      * Constructor method for ArrayOfStockPrice
      * @uses ArrayOfStockPrice::setStockPrice()
-     * @param \StructType\StockPrice[] $stockPrice
+     * @param \AceParts\Trw\StructType\StockPrice[] $stockPrice
      */
     public function __construct(array $stockPrice = array())
     {
@@ -34,7 +34,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\StockPrice[]|null
+     * @return \AceParts\Trw\StructType\StockPrice[]|null
      */
     public function getStockPrice()
     {
@@ -52,12 +52,12 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfStockPriceStockPriceItem) {
             // validation for constraint: itemType
-            if (!$arrayOfStockPriceStockPriceItem instanceof \StructType\StockPrice) {
+            if (!$arrayOfStockPriceStockPriceItem instanceof \AceParts\Trw\StructType\StockPrice) {
                 $invalidValues[] = is_object($arrayOfStockPriceStockPriceItem) ? get_class($arrayOfStockPriceStockPriceItem) : sprintf('%s(%s)', gettype($arrayOfStockPriceStockPriceItem), var_export($arrayOfStockPriceStockPriceItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The StockPrice property can only contain items of type \StructType\StockPrice, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The StockPrice property can only contain items of type \AceParts\Trw\StructType\StockPrice, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         return $message;
@@ -67,8 +67,8 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws \InvalidArgumentException
-     * @param \StructType\StockPrice[] $stockPrice
-     * @return \ArrayType\ArrayOfStockPrice
+     * @param \AceParts\Trw\StructType\StockPrice[] $stockPrice
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockPrice
      */
     public function setStockPrice(array $stockPrice = array())
     {
@@ -86,14 +86,14 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
     /**
      * Add item to StockPrice value
      * @throws \InvalidArgumentException
-     * @param \StructType\StockPrice $item
-     * @return \ArrayType\ArrayOfStockPrice
+     * @param \AceParts\Trw\StructType\StockPrice $item
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockPrice
      */
-    public function addToStockPrice(\StructType\StockPrice $item)
+    public function addToStockPrice(\AceParts\Trw\StructType\StockPrice $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\StockPrice) {
-            throw new \InvalidArgumentException(sprintf('The StockPrice property can only contain items of type \StructType\StockPrice, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \AceParts\Trw\StructType\StockPrice) {
+            throw new \InvalidArgumentException(sprintf('The StockPrice property can only contain items of type \AceParts\Trw\StructType\StockPrice, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->StockPrice[] = $item;
         return $this;
@@ -101,7 +101,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\StockPrice|null
+     * @return \AceParts\Trw\StructType\StockPrice|null
      */
     public function current()
     {
@@ -111,7 +111,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\StockPrice|null
+     * @return \AceParts\Trw\StructType\StockPrice|null
      */
     public function item($index)
     {
@@ -120,7 +120,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\StockPrice|null
+     * @return \AceParts\Trw\StructType\StockPrice|null
      */
     public function first()
     {
@@ -129,7 +129,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\StockPrice|null
+     * @return \AceParts\Trw\StructType\StockPrice|null
      */
     public function last()
     {
@@ -139,7 +139,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\StockPrice|null
+     * @return \AceParts\Trw\StructType\StockPrice|null
      */
     public function offsetGet($offset)
     {
@@ -160,7 +160,7 @@ class ArrayOfStockPrice extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::__set_state()
      * @uses AbstractStructArrayBase::__set_state()
      * @param array $array the exported values
-     * @return \ArrayType\ArrayOfStockPrice
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockPrice
      */
     public static function __set_state(array $array)
     {

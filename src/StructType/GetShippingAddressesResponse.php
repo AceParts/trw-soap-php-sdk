@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class GetShippingAddressesResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ShipToResponse
+     * @var \AceParts\Trw\StructType\ShipToResponse
      */
     public $getShippingAddressesResult;
     /**
      * Constructor method for getShippingAddressesResponse
      * @uses GetShippingAddressesResponse::setGetShippingAddressesResult()
-     * @param \StructType\ShipToResponse $getShippingAddressesResult
+     * @param \AceParts\Trw\StructType\ShipToResponse $getShippingAddressesResult
      */
-    public function __construct(\StructType\ShipToResponse $getShippingAddressesResult = null)
+    public function __construct(\AceParts\Trw\StructType\ShipToResponse $getShippingAddressesResult = null)
     {
         $this
             ->setGetShippingAddressesResult($getShippingAddressesResult);
     }
     /**
      * Get getShippingAddressesResult value
-     * @return \StructType\ShipToResponse|null
+     * @return \AceParts\Trw\StructType\ShipToResponse|null
      */
     public function getGetShippingAddressesResult()
     {
@@ -38,10 +38,10 @@ class GetShippingAddressesResponse extends AbstractStructBase
     }
     /**
      * Set getShippingAddressesResult value
-     * @param \StructType\ShipToResponse $getShippingAddressesResult
-     * @return \StructType\GetShippingAddressesResponse
+     * @param \AceParts\Trw\StructType\ShipToResponse $getShippingAddressesResult
+     * @return \AceParts\Trw\StructType\GetShippingAddressesResponse
      */
-    public function setGetShippingAddressesResult(\StructType\ShipToResponse $getShippingAddressesResult = null)
+    public function setGetShippingAddressesResult(\AceParts\Trw\StructType\ShipToResponse $getShippingAddressesResult = null)
     {
         $this->getShippingAddressesResult = $getShippingAddressesResult;
         return $this;
@@ -52,7 +52,7 @@ class GetShippingAddressesResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\GetShippingAddressesResponse
+     * @return \AceParts\Trw\StructType\GetShippingAddressesResponse
      */
     public static function __set_state(array $array)
     {

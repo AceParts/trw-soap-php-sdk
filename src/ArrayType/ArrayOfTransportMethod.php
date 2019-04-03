@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayType;
+namespace AceParts\Trw\ArrayType;
 
 use \WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -16,13 +16,13 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\TransportMethod[]
+     * @var \AceParts\Trw\StructType\TransportMethod[]
      */
     public $TransportMethod;
     /**
      * Constructor method for ArrayOfTransportMethod
      * @uses ArrayOfTransportMethod::setTransportMethod()
-     * @param \StructType\TransportMethod[] $transportMethod
+     * @param \AceParts\Trw\StructType\TransportMethod[] $transportMethod
      */
     public function __construct(array $transportMethod = array())
     {
@@ -34,7 +34,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\TransportMethod[]|null
+     * @return \AceParts\Trw\StructType\TransportMethod[]|null
      */
     public function getTransportMethod()
     {
@@ -52,12 +52,12 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfTransportMethodTransportMethodItem) {
             // validation for constraint: itemType
-            if (!$arrayOfTransportMethodTransportMethodItem instanceof \StructType\TransportMethod) {
+            if (!$arrayOfTransportMethodTransportMethodItem instanceof \AceParts\Trw\StructType\TransportMethod) {
                 $invalidValues[] = is_object($arrayOfTransportMethodTransportMethodItem) ? get_class($arrayOfTransportMethodTransportMethodItem) : sprintf('%s(%s)', gettype($arrayOfTransportMethodTransportMethodItem), var_export($arrayOfTransportMethodTransportMethodItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The TransportMethod property can only contain items of type \StructType\TransportMethod, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The TransportMethod property can only contain items of type \AceParts\Trw\StructType\TransportMethod, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         return $message;
@@ -67,8 +67,8 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws \InvalidArgumentException
-     * @param \StructType\TransportMethod[] $transportMethod
-     * @return \ArrayType\ArrayOfTransportMethod
+     * @param \AceParts\Trw\StructType\TransportMethod[] $transportMethod
+     * @return \AceParts\Trw\ArrayType\ArrayOfTransportMethod
      */
     public function setTransportMethod(array $transportMethod = array())
     {
@@ -86,14 +86,14 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
     /**
      * Add item to TransportMethod value
      * @throws \InvalidArgumentException
-     * @param \StructType\TransportMethod $item
-     * @return \ArrayType\ArrayOfTransportMethod
+     * @param \AceParts\Trw\StructType\TransportMethod $item
+     * @return \AceParts\Trw\ArrayType\ArrayOfTransportMethod
      */
-    public function addToTransportMethod(\StructType\TransportMethod $item)
+    public function addToTransportMethod(\AceParts\Trw\StructType\TransportMethod $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\TransportMethod) {
-            throw new \InvalidArgumentException(sprintf('The TransportMethod property can only contain items of type \StructType\TransportMethod, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \AceParts\Trw\StructType\TransportMethod) {
+            throw new \InvalidArgumentException(sprintf('The TransportMethod property can only contain items of type \AceParts\Trw\StructType\TransportMethod, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->TransportMethod[] = $item;
         return $this;
@@ -101,7 +101,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\TransportMethod|null
+     * @return \AceParts\Trw\StructType\TransportMethod|null
      */
     public function current()
     {
@@ -111,7 +111,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\TransportMethod|null
+     * @return \AceParts\Trw\StructType\TransportMethod|null
      */
     public function item($index)
     {
@@ -120,7 +120,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\TransportMethod|null
+     * @return \AceParts\Trw\StructType\TransportMethod|null
      */
     public function first()
     {
@@ -129,7 +129,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\TransportMethod|null
+     * @return \AceParts\Trw\StructType\TransportMethod|null
      */
     public function last()
     {
@@ -139,7 +139,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\TransportMethod|null
+     * @return \AceParts\Trw\StructType\TransportMethod|null
      */
     public function offsetGet($offset)
     {
@@ -160,7 +160,7 @@ class ArrayOfTransportMethod extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::__set_state()
      * @uses AbstractStructArrayBase::__set_state()
      * @param array $array the exported values
-     * @return \ArrayType\ArrayOfTransportMethod
+     * @return \AceParts\Trw\ArrayType\ArrayOfTransportMethod
      */
     public static function __set_state(array $array)
     {

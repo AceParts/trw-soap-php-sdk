@@ -1,6 +1,6 @@
 <?php
 
-namespace ServiceType;
+namespace AceParts\Trw\ServiceType;
 
 use \WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -16,10 +16,10 @@ class Place extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::getResult()
      * @uses AbstractSoapClientBase::saveLastError()
-     * @param \StructType\PlaceOrders $parameters
-     * @return \StructType\PlaceOrdersResponse|bool
+     * @param \AceParts\Trw\StructType\PlaceOrders $parameters
+     * @return \AceParts\Trw\StructType\PlaceOrdersResponse|bool
      */
-    public function placeOrders(\StructType\PlaceOrders $parameters)
+    public function placeOrders(\AceParts\Trw\StructType\PlaceOrders $parameters)
     {
         try {
             $this->setResult($this->getSoapClient()->placeOrders($parameters));
@@ -32,7 +32,7 @@ class Place extends AbstractSoapClientBase
     /**
      * Returns the result
      * @see AbstractSoapClientBase::getResult()
-     * @return \StructType\PlaceOrdersResponse
+     * @return \AceParts\Trw\StructType\PlaceOrdersResponse
      */
     public function getResult()
     {

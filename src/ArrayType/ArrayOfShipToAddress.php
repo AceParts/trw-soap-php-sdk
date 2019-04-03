@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayType;
+namespace AceParts\Trw\ArrayType;
 
 use \WsdlToPhp\PackageBase\AbstractStructArrayBase;
 
@@ -16,13 +16,13 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
      * - maxOccurs: unbounded
      * - minOccurs: 0
      * - nillable: true
-     * @var \StructType\ShipToAddress[]
+     * @var \AceParts\Trw\StructType\ShipToAddress[]
      */
     public $ShipToAddress;
     /**
      * Constructor method for ArrayOfShipToAddress
      * @uses ArrayOfShipToAddress::setShipToAddress()
-     * @param \StructType\ShipToAddress[] $shipToAddress
+     * @param \AceParts\Trw\StructType\ShipToAddress[] $shipToAddress
      */
     public function __construct(array $shipToAddress = array())
     {
@@ -34,7 +34,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
      * An additional test has been added (isset) before returning the property value as
      * this property may have been unset before, due to the fact that this property is
      * removable from the request (nillable=true+minOccurs=0)
-     * @return \StructType\ShipToAddress[]|null
+     * @return \AceParts\Trw\StructType\ShipToAddress[]|null
      */
     public function getShipToAddress()
     {
@@ -52,12 +52,12 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
         $invalidValues = [];
         foreach ($values as $arrayOfShipToAddressShipToAddressItem) {
             // validation for constraint: itemType
-            if (!$arrayOfShipToAddressShipToAddressItem instanceof \StructType\ShipToAddress) {
+            if (!$arrayOfShipToAddressShipToAddressItem instanceof \AceParts\Trw\StructType\ShipToAddress) {
                 $invalidValues[] = is_object($arrayOfShipToAddressShipToAddressItem) ? get_class($arrayOfShipToAddressShipToAddressItem) : sprintf('%s(%s)', gettype($arrayOfShipToAddressShipToAddressItem), var_export($arrayOfShipToAddressShipToAddressItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The ShipToAddress property can only contain items of type \StructType\ShipToAddress, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The ShipToAddress property can only contain items of type \AceParts\Trw\StructType\ShipToAddress, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         return $message;
@@ -67,8 +67,8 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
      * This property is removable from request (nillable=true+minOccurs=0), therefore
      * if the value assigned to this property is null, it is removed from this object
      * @throws \InvalidArgumentException
-     * @param \StructType\ShipToAddress[] $shipToAddress
-     * @return \ArrayType\ArrayOfShipToAddress
+     * @param \AceParts\Trw\StructType\ShipToAddress[] $shipToAddress
+     * @return \AceParts\Trw\ArrayType\ArrayOfShipToAddress
      */
     public function setShipToAddress(array $shipToAddress = array())
     {
@@ -86,14 +86,14 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
     /**
      * Add item to ShipToAddress value
      * @throws \InvalidArgumentException
-     * @param \StructType\ShipToAddress $item
-     * @return \ArrayType\ArrayOfShipToAddress
+     * @param \AceParts\Trw\StructType\ShipToAddress $item
+     * @return \AceParts\Trw\ArrayType\ArrayOfShipToAddress
      */
-    public function addToShipToAddress(\StructType\ShipToAddress $item)
+    public function addToShipToAddress(\AceParts\Trw\StructType\ShipToAddress $item)
     {
         // validation for constraint: itemType
-        if (!$item instanceof \StructType\ShipToAddress) {
-            throw new \InvalidArgumentException(sprintf('The ShipToAddress property can only contain items of type \StructType\ShipToAddress, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \AceParts\Trw\StructType\ShipToAddress) {
+            throw new \InvalidArgumentException(sprintf('The ShipToAddress property can only contain items of type \AceParts\Trw\StructType\ShipToAddress, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->ShipToAddress[] = $item;
         return $this;
@@ -101,7 +101,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
     /**
      * Returns the current element
      * @see AbstractStructArrayBase::current()
-     * @return \StructType\ShipToAddress|null
+     * @return \AceParts\Trw\StructType\ShipToAddress|null
      */
     public function current()
     {
@@ -111,7 +111,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
      * Returns the indexed element
      * @see AbstractStructArrayBase::item()
      * @param int $index
-     * @return \StructType\ShipToAddress|null
+     * @return \AceParts\Trw\StructType\ShipToAddress|null
      */
     public function item($index)
     {
@@ -120,7 +120,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
     /**
      * Returns the first element
      * @see AbstractStructArrayBase::first()
-     * @return \StructType\ShipToAddress|null
+     * @return \AceParts\Trw\StructType\ShipToAddress|null
      */
     public function first()
     {
@@ -129,7 +129,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
     /**
      * Returns the last element
      * @see AbstractStructArrayBase::last()
-     * @return \StructType\ShipToAddress|null
+     * @return \AceParts\Trw\StructType\ShipToAddress|null
      */
     public function last()
     {
@@ -139,7 +139,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
      * Returns the element at the offset
      * @see AbstractStructArrayBase::offsetGet()
      * @param int $offset
-     * @return \StructType\ShipToAddress|null
+     * @return \AceParts\Trw\StructType\ShipToAddress|null
      */
     public function offsetGet($offset)
     {
@@ -160,7 +160,7 @@ class ArrayOfShipToAddress extends AbstractStructArrayBase
      * @see AbstractStructArrayBase::__set_state()
      * @uses AbstractStructArrayBase::__set_state()
      * @param array $array the exported values
-     * @return \ArrayType\ArrayOfShipToAddress
+     * @return \AceParts\Trw\ArrayType\ArrayOfShipToAddress
      */
     public static function __set_state(array $array)
     {

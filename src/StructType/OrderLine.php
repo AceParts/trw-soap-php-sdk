@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -71,7 +71,7 @@ class OrderLine extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -127,7 +127,7 @@ class OrderLine extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfStatusCode
+     * @var \AceParts\Trw\ArrayType\ArrayOfStatusCode
      */
     public $DetailStatus;
     /**
@@ -154,16 +154,16 @@ class OrderLine extends AbstractStructBase
      * @param float $handlingCharge
      * @param float $surcharge
      * @param float $unitPrice
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $orderLineNumber
      * @param string $orderLineSplitNumber
      * @param string $orderLineStatus
      * @param string $orderedPartNumber
      * @param string $suppliedPartNumber
      * @param string $currencyCode
-     * @param \ArrayType\ArrayOfStatusCode $detailStatus
+     * @param \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus
      */
-    public function __construct($lineNumber = null, $orderedQuantity = null, $suppliedQuantity = null, $freightCharge = null, $handlingCharge = null, $surcharge = null, $unitPrice = null, \StructType\ExtensionDataObject $extensionData = null, $orderLineNumber = null, $orderLineSplitNumber = null, $orderLineStatus = null, $orderedPartNumber = null, $suppliedPartNumber = null, $currencyCode = null, \ArrayType\ArrayOfStatusCode $detailStatus = null)
+    public function __construct($lineNumber = null, $orderedQuantity = null, $suppliedQuantity = null, $freightCharge = null, $handlingCharge = null, $surcharge = null, $unitPrice = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $orderLineNumber = null, $orderLineSplitNumber = null, $orderLineStatus = null, $orderedPartNumber = null, $suppliedPartNumber = null, $currencyCode = null, \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus = null)
     {
         $this
             ->setLineNumber($lineNumber)
@@ -193,7 +193,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -215,7 +215,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set OrderedQuantity value
      * @param int $orderedQuantity
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setOrderedQuantity($orderedQuantity = null)
     {
@@ -237,7 +237,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set SuppliedQuantity value
      * @param int $suppliedQuantity
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setSuppliedQuantity($suppliedQuantity = null)
     {
@@ -259,7 +259,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set FreightCharge value
      * @param float $freightCharge
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setFreightCharge($freightCharge = null)
     {
@@ -281,7 +281,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set HandlingCharge value
      * @param float $handlingCharge
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setHandlingCharge($handlingCharge = null)
     {
@@ -303,7 +303,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set Surcharge value
      * @param float $surcharge
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setSurcharge($surcharge = null)
     {
@@ -325,7 +325,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set UnitPrice value
      * @param float $unitPrice
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setUnitPrice($unitPrice = null)
     {
@@ -338,7 +338,7 @@ class OrderLine extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -346,10 +346,10 @@ class OrderLine extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\OrderLine
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\OrderLine
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -365,7 +365,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set OrderLineNumber value
      * @param string $orderLineNumber
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setOrderLineNumber($orderLineNumber = null)
     {
@@ -387,7 +387,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set OrderLineSplitNumber value
      * @param string $orderLineSplitNumber
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setOrderLineSplitNumber($orderLineSplitNumber = null)
     {
@@ -409,7 +409,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set OrderLineStatus value
      * @param string $orderLineStatus
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setOrderLineStatus($orderLineStatus = null)
     {
@@ -431,7 +431,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set OrderedPartNumber value
      * @param string $orderedPartNumber
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setOrderedPartNumber($orderedPartNumber = null)
     {
@@ -453,7 +453,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set SuppliedPartNumber value
      * @param string $suppliedPartNumber
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setSuppliedPartNumber($suppliedPartNumber = null)
     {
@@ -475,7 +475,7 @@ class OrderLine extends AbstractStructBase
     /**
      * Set CurrencyCode value
      * @param string $currencyCode
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public function setCurrencyCode($currencyCode = null)
     {
@@ -488,7 +488,7 @@ class OrderLine extends AbstractStructBase
     }
     /**
      * Get DetailStatus value
-     * @return \ArrayType\ArrayOfStatusCode|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfStatusCode|null
      */
     public function getDetailStatus()
     {
@@ -496,10 +496,10 @@ class OrderLine extends AbstractStructBase
     }
     /**
      * Set DetailStatus value
-     * @param \ArrayType\ArrayOfStatusCode $detailStatus
-     * @return \StructType\OrderLine
+     * @param \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus
+     * @return \AceParts\Trw\StructType\OrderLine
      */
-    public function setDetailStatus(\ArrayType\ArrayOfStatusCode $detailStatus = null)
+    public function setDetailStatus(\AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus = null)
     {
         $this->DetailStatus = $detailStatus;
         return $this;
@@ -510,7 +510,7 @@ class OrderLine extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\OrderLine
+     * @return \AceParts\Trw\StructType\OrderLine
      */
     public static function __set_state(array $array)
     {

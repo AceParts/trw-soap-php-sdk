@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,7 +15,7 @@ class StatusCode extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -39,11 +39,11 @@ class StatusCode extends AbstractStructBase
      * @uses StatusCode::setExtensionData()
      * @uses StatusCode::setCode()
      * @uses StatusCode::setDescription()
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $code
      * @param string $description
      */
-    public function __construct(\StructType\ExtensionDataObject $extensionData = null, $code = null, $description = null)
+    public function __construct(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $code = null, $description = null)
     {
         $this
             ->setExtensionData($extensionData)
@@ -52,7 +52,7 @@ class StatusCode extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -60,10 +60,10 @@ class StatusCode extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\StatusCode
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\StatusCode
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -79,7 +79,7 @@ class StatusCode extends AbstractStructBase
     /**
      * Set Code value
      * @param string $code
-     * @return \StructType\StatusCode
+     * @return \AceParts\Trw\StructType\StatusCode
      */
     public function setCode($code = null)
     {
@@ -101,7 +101,7 @@ class StatusCode extends AbstractStructBase
     /**
      * Set Description value
      * @param string $description
-     * @return \StructType\StatusCode
+     * @return \AceParts\Trw\StructType\StatusCode
      */
     public function setDescription($description = null)
     {
@@ -118,7 +118,7 @@ class StatusCode extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\StatusCode
+     * @return \AceParts\Trw\StructType\StatusCode
      */
     public static function __set_state(array $array)
     {

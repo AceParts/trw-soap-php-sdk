@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -23,7 +23,7 @@ class StockAvailabilityResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -55,7 +55,7 @@ class StockAvailabilityResponse extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfStockAvailability
+     * @var \AceParts\Trw\ArrayType\ArrayOfStockAvailability
      */
     public $StockAvailability;
     /**
@@ -67,13 +67,13 @@ class StockAvailabilityResponse extends AbstractStructBase
      * @uses StockAvailabilityResponse::setCustomerAccount()
      * @uses StockAvailabilityResponse::setStockAvailability()
      * @param bool $responseEmpty
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $responseStatus
      * @param string $responseMessage
      * @param string $customerAccount
-     * @param \ArrayType\ArrayOfStockAvailability $stockAvailability
+     * @param \AceParts\Trw\ArrayType\ArrayOfStockAvailability $stockAvailability
      */
-    public function __construct($responseEmpty = null, \StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \ArrayType\ArrayOfStockAvailability $stockAvailability = null)
+    public function __construct($responseEmpty = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $responseStatus = null, $responseMessage = null, $customerAccount = null, \AceParts\Trw\ArrayType\ArrayOfStockAvailability $stockAvailability = null)
     {
         $this
             ->setResponseEmpty($responseEmpty)
@@ -94,7 +94,7 @@ class StockAvailabilityResponse extends AbstractStructBase
     /**
      * Set ResponseEmpty value
      * @param bool $responseEmpty
-     * @return \StructType\StockAvailabilityResponse
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
     public function setResponseEmpty($responseEmpty = null)
     {
@@ -107,7 +107,7 @@ class StockAvailabilityResponse extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -115,10 +115,10 @@ class StockAvailabilityResponse extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\StockAvailabilityResponse
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -134,7 +134,7 @@ class StockAvailabilityResponse extends AbstractStructBase
     /**
      * Set ResponseStatus value
      * @param string $responseStatus
-     * @return \StructType\StockAvailabilityResponse
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
     public function setResponseStatus($responseStatus = null)
     {
@@ -156,7 +156,7 @@ class StockAvailabilityResponse extends AbstractStructBase
     /**
      * Set ResponseMessage value
      * @param string $responseMessage
-     * @return \StructType\StockAvailabilityResponse
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
     public function setResponseMessage($responseMessage = null)
     {
@@ -178,7 +178,7 @@ class StockAvailabilityResponse extends AbstractStructBase
     /**
      * Set CustomerAccount value
      * @param string $customerAccount
-     * @return \StructType\StockAvailabilityResponse
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
     public function setCustomerAccount($customerAccount = null)
     {
@@ -191,7 +191,7 @@ class StockAvailabilityResponse extends AbstractStructBase
     }
     /**
      * Get StockAvailability value
-     * @return \ArrayType\ArrayOfStockAvailability|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfStockAvailability|null
      */
     public function getStockAvailability()
     {
@@ -199,10 +199,10 @@ class StockAvailabilityResponse extends AbstractStructBase
     }
     /**
      * Set StockAvailability value
-     * @param \ArrayType\ArrayOfStockAvailability $stockAvailability
-     * @return \StructType\StockAvailabilityResponse
+     * @param \AceParts\Trw\ArrayType\ArrayOfStockAvailability $stockAvailability
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
-    public function setStockAvailability(\ArrayType\ArrayOfStockAvailability $stockAvailability = null)
+    public function setStockAvailability(\AceParts\Trw\ArrayType\ArrayOfStockAvailability $stockAvailability = null)
     {
         $this->StockAvailability = $stockAvailability;
         return $this;
@@ -213,7 +213,7 @@ class StockAvailabilityResponse extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\StockAvailabilityResponse
+     * @return \AceParts\Trw\StructType\StockAvailabilityResponse
      */
     public static function __set_state(array $array)
     {

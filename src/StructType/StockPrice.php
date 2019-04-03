@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -71,7 +71,7 @@ class StockPrice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\ExtensionDataObject
+     * @var \AceParts\Trw\StructType\ExtensionDataObject
      */
     public $ExtensionData;
     /**
@@ -103,7 +103,7 @@ class StockPrice extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \ArrayType\ArrayOfStatusCode
+     * @var \AceParts\Trw\ArrayType\ArrayOfStatusCode
      */
     public $DetailStatus;
     /**
@@ -127,13 +127,13 @@ class StockPrice extends AbstractStructBase
      * @param float $freightCharge
      * @param float $handlingCharge
      * @param float $unitPrice
-     * @param \StructType\ExtensionDataObject $extensionData
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
      * @param string $enteredPartNumber
      * @param string $suppliedPartNumber
      * @param string $currencyCode
-     * @param \ArrayType\ArrayOfStatusCode $detailStatus
+     * @param \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus
      */
-    public function __construct($lineNumber = null, $enteredQuantity = null, $suppliedQuantity = null, $surcharge = null, $freightCharge = null, $handlingCharge = null, $unitPrice = null, \StructType\ExtensionDataObject $extensionData = null, $enteredPartNumber = null, $suppliedPartNumber = null, $currencyCode = null, \ArrayType\ArrayOfStatusCode $detailStatus = null)
+    public function __construct($lineNumber = null, $enteredQuantity = null, $suppliedQuantity = null, $surcharge = null, $freightCharge = null, $handlingCharge = null, $unitPrice = null, \AceParts\Trw\StructType\ExtensionDataObject $extensionData = null, $enteredPartNumber = null, $suppliedPartNumber = null, $currencyCode = null, \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus = null)
     {
         $this
             ->setLineNumber($lineNumber)
@@ -160,7 +160,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set LineNumber value
      * @param int $lineNumber
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setLineNumber($lineNumber = null)
     {
@@ -182,7 +182,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set EnteredQuantity value
      * @param int $enteredQuantity
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setEnteredQuantity($enteredQuantity = null)
     {
@@ -204,7 +204,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set SuppliedQuantity value
      * @param int $suppliedQuantity
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setSuppliedQuantity($suppliedQuantity = null)
     {
@@ -226,7 +226,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set Surcharge value
      * @param float $surcharge
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setSurcharge($surcharge = null)
     {
@@ -248,7 +248,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set FreightCharge value
      * @param float $freightCharge
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setFreightCharge($freightCharge = null)
     {
@@ -270,7 +270,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set HandlingCharge value
      * @param float $handlingCharge
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setHandlingCharge($handlingCharge = null)
     {
@@ -292,7 +292,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set UnitPrice value
      * @param float $unitPrice
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setUnitPrice($unitPrice = null)
     {
@@ -305,7 +305,7 @@ class StockPrice extends AbstractStructBase
     }
     /**
      * Get ExtensionData value
-     * @return \StructType\ExtensionDataObject|null
+     * @return \AceParts\Trw\StructType\ExtensionDataObject|null
      */
     public function getExtensionData()
     {
@@ -313,10 +313,10 @@ class StockPrice extends AbstractStructBase
     }
     /**
      * Set ExtensionData value
-     * @param \StructType\ExtensionDataObject $extensionData
-     * @return \StructType\StockPrice
+     * @param \AceParts\Trw\StructType\ExtensionDataObject $extensionData
+     * @return \AceParts\Trw\StructType\StockPrice
      */
-    public function setExtensionData(\StructType\ExtensionDataObject $extensionData = null)
+    public function setExtensionData(\AceParts\Trw\StructType\ExtensionDataObject $extensionData = null)
     {
         $this->ExtensionData = $extensionData;
         return $this;
@@ -332,7 +332,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set EnteredPartNumber value
      * @param string $enteredPartNumber
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setEnteredPartNumber($enteredPartNumber = null)
     {
@@ -354,7 +354,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set SuppliedPartNumber value
      * @param string $suppliedPartNumber
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setSuppliedPartNumber($suppliedPartNumber = null)
     {
@@ -376,7 +376,7 @@ class StockPrice extends AbstractStructBase
     /**
      * Set CurrencyCode value
      * @param string $currencyCode
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public function setCurrencyCode($currencyCode = null)
     {
@@ -389,7 +389,7 @@ class StockPrice extends AbstractStructBase
     }
     /**
      * Get DetailStatus value
-     * @return \ArrayType\ArrayOfStatusCode|null
+     * @return \AceParts\Trw\ArrayType\ArrayOfStatusCode|null
      */
     public function getDetailStatus()
     {
@@ -397,10 +397,10 @@ class StockPrice extends AbstractStructBase
     }
     /**
      * Set DetailStatus value
-     * @param \ArrayType\ArrayOfStatusCode $detailStatus
-     * @return \StructType\StockPrice
+     * @param \AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus
+     * @return \AceParts\Trw\StructType\StockPrice
      */
-    public function setDetailStatus(\ArrayType\ArrayOfStatusCode $detailStatus = null)
+    public function setDetailStatus(\AceParts\Trw\ArrayType\ArrayOfStatusCode $detailStatus = null)
     {
         $this->DetailStatus = $detailStatus;
         return $this;
@@ -411,7 +411,7 @@ class StockPrice extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\StockPrice
+     * @return \AceParts\Trw\StructType\StockPrice
      */
     public static function __set_state(array $array)
     {

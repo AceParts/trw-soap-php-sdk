@@ -1,6 +1,6 @@
 <?php
 
-namespace StructType;
+namespace AceParts\Trw\StructType;
 
 use \WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class PlaceOrders extends AbstractStructBase
      * Meta informations extracted from the WSDL
      * - maxOccurs: 1
      * - minOccurs: 0
-     * @var \StructType\OrderRequest
+     * @var \AceParts\Trw\StructType\OrderRequest
      */
     public $request;
     /**
      * Constructor method for placeOrders
      * @uses PlaceOrders::setRequest()
-     * @param \StructType\OrderRequest $request
+     * @param \AceParts\Trw\StructType\OrderRequest $request
      */
-    public function __construct(\StructType\OrderRequest $request = null)
+    public function __construct(\AceParts\Trw\StructType\OrderRequest $request = null)
     {
         $this
             ->setRequest($request);
     }
     /**
      * Get request value
-     * @return \StructType\OrderRequest|null
+     * @return \AceParts\Trw\StructType\OrderRequest|null
      */
     public function getRequest()
     {
@@ -38,10 +38,10 @@ class PlaceOrders extends AbstractStructBase
     }
     /**
      * Set request value
-     * @param \StructType\OrderRequest $request
-     * @return \StructType\PlaceOrders
+     * @param \AceParts\Trw\StructType\OrderRequest $request
+     * @return \AceParts\Trw\StructType\PlaceOrders
      */
-    public function setRequest(\StructType\OrderRequest $request = null)
+    public function setRequest(\AceParts\Trw\StructType\OrderRequest $request = null)
     {
         $this->request = $request;
         return $this;
@@ -52,7 +52,7 @@ class PlaceOrders extends AbstractStructBase
      * @see AbstractStructBase::__set_state()
      * @uses AbstractStructBase::__set_state()
      * @param array $array the exported values
-     * @return \StructType\PlaceOrders
+     * @return \AceParts\Trw\StructType\PlaceOrders
      */
     public static function __set_state(array $array)
     {
