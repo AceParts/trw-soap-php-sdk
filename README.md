@@ -90,3 +90,18 @@ if ($get->getStockAvailability($stockQuery) !== false) {
 #}
 
 ```
+
+## Generated with
+
+### PHP 5
+
+```
+php56 wsdltophp-php5.phar generate:package --urlorpath="https://webservices.trwaftermarket.com/eos/v1/DistributorWebService.asmx?wsdl" --destination="./trwsdk" --composer-name="aceparts/trw-soap-php-sdk" --namespace="AceParts\Trw" --force
+```
+
+### PHP 7
+
+
+```
+php wsdltophp-php7.phar generate:package --urlorpath="https://webservices.trwaftermarket.com/eos/v1/DistributorWebService.asmx?wsdl" --destination="./trwsdk" --composer-name="aceparts/trw-soap-php-sdk" --namespace="AceParts\Trw" --force
+```

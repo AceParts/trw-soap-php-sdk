@@ -1,5 +1,5 @@
 {
-    "name": "trw-soap-php-sdk",
+    "name": "aceparts/trw-soap-php-sdk",
     "description": "Package generated from https://webservices.trwaftermarket.com/eos/v1/DistributorWebService.asmx?wsdl using wsdltophp/packagegenerator",
     "require": {
         "php": ">=5.3.3",
